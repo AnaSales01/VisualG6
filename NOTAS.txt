@@ -1,0 +1,29 @@
+algoritmo "Notas"
+// Função : O usuário insere as notas e o programa retorna as notas.
+// Autor : Ana Claudia Correa da Silva
+// Data : 05/11/2020
+// Seção de Declarações 
+var
+
+Notas: vetor [1..8,1..4] de real
+I,J: inteiro
+
+inicio
+
+para I de 1 ate 8 faca
+    para J de 1 ate 4 faca
+         escreval("")
+         escreval("Digite a nota: ")
+         escreval("")
+         leia(Notas[I,J])
+         escreval("")
+         escreval(Notas[i,j])
+    fimpara
+fimpara
+       para I de 1 ate 8 faca
+            para J de 1 ate 4 faca
+                 escreval("")
+                 escreval(Notas[i,j])
+            fimpara
+       fimpara
+fimalgoritmo

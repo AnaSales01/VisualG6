@@ -1,0 +1,33 @@
+algoritmo "Voto"
+// Função : O usuário insere o candidato em que deseja votar e o programa retorna o nome do candidato.
+// Autor :  Ana Claudia Correa da Silva
+// Data : 31/10/2020
+// Seção de Declarações 
+var
+
+ opcao: caractere
+ contA,contB: inteiro
+
+inicio
+
+contA <- 0
+contB <- 0
+escreval("")
+escreval("Para votar na candidata Ana, digite A: ")
+escreval("")
+escreval("Para votar no candidato Bruno, digite B: ")
+escreval("")
+leia(opcao)
+escolha opcao
+caso "A"
+escreval("")
+escreval("Você votou na candidata Ana!")
+escreval("")
+caso "B"
+escreval("")
+escreval("Você votou no candidato Bruno!")
+escreval("")
+fimescolha
+
+fimalgoritmo
+

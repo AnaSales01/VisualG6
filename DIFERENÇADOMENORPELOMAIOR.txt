@@ -1,0 +1,25 @@
+algoritmo "DIFERENÇADOMENORPELOMENOR"
+// Função : O USUÁRIO INSERE 2 VALORES E O PROGRAMA RETORNA A DIFEREÇA DO MAIOR VALOR PELO MENOR VALOR.
+// Autor : ANA CLAUDIA CORREA DA SILVA
+// Data : 24/10/2020
+// Seção de Declarações 
+var
+
+X,Y,MX,MY: INTEIRO
+
+inicio
+
+ESCREVAL("DIGITE UM NÚMERO QUALQUER (INTEIRO)")
+                 LEIA(X)
+ ESCREVAL("")
+ ESCREVAL("DIGITE OUTRO NÚMERO QUALQUER (INTEIRO) ")
+                  LEIA(Y)
+  MX <- X - Y
+  MY <- Y - X
+     SE X > Y ENTAO
+     ESCREVAL("ESSE É A DIFERENÇA DE ",X," - ",Y," = ",MX)
+     SENAO
+     ESCREVAL("ESSE É A DIFERENÇA DE ",Y," - ",X," = ",MY)
+  FIMSE
+
+fimalgoritmo

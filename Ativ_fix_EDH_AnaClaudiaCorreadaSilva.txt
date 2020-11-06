@@ -1,0 +1,86 @@
+algoritmo "Tabela_de_Salário"
+// Função : O usuário insere as informações referentes ao salário e função dos funcionários e pode procurar se o funcionário se encontra cadastrado ou não.
+// Autor : Ana Claudia Correa da Silva
+// Data : 30/10/2020
+// Seção de Declarações 
+
+ tipo
+
+DADOS = registro
+Codigo: inteiro
+Cargo: caractere
+Sal: real
+fimregistro
+
+var
+
+tabela: vetor [1..17] de DADOS
+i,codigo: inteiro
+resp: caractere
+acha: logico
+
+inicio
+
+escreval("")
+escreval("----------------------------------------------------------------------")
+escreval("|                    CADASTRO DE FUNCIONÁRIOS                        |")
+escreval("----------------------------------------------------------------------")
+escreval("")
+
+//Entrada de dados para o cadastro de funcionários//
+
+para i de 1 ate 17 passo 1 faca
+     tabela[i].Codigo <- i
+     escreval("")
+     escreval("                  Digite o Código do funcionário: ",Tabela[i].codigo)
+     escreval("=================================================================")
+     escreval("")
+     leia(Tabela[i].codigo)
+     escreval("")
+     escreval("                  Digite o Cargo do funcionário: ",Tabela[i].cargo)
+     escreval("=================================================================")
+     escreval("")
+     leia(Tabela[i].cargo)
+     escreval("")
+     escreval("                  Digite o Salário do funcionário: ",Tabela[i].sal)
+     escreval("=================================================================")
+     escreval("")
+     leia(Tabela[i].sal)
+fimpara
+limpatela
+       //Pesquisa dos dados do funcionário por código//
+       resp <- "sim"
+       enquanto (resp = "sim") faca
+                escreval("")
+                escreval("           Qual o código (1 a 17)?                    ")
+                escreval("======================================================")
+                escreval("")
+                leia(codigo)
+       i <- 1
+       acha <- falso
+            enquanto (i <= 17) e (acha = falso) faca
+                     se (codigo = tabela[i].codigo) entao
+       acha <- verdadeiro
+                     senao
+       i <- i + 1
+                     fimse
+            fimenquanto
+                    se (acha = verdadeiro) entao
+                       escreval("")
+                       escreval("Cargo: ",Tabela[i].cargo)
+                       escreval("")
+                       escreval("Salário: ",tabela[i].sal)
+                       escreval("")
+                    senao
+                       escreval("")
+                       escreval("Cargo INEXISTENTE")
+                       escreval("")
+                    fimse
+                    limpatela
+            escreval("")
+            escreval("Deseja Continuar a pesquisa?")
+            escreval("")
+            leia(resp)
+       fimenquanto
+
+fimalgoritmo

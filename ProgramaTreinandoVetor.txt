@@ -1,0 +1,27 @@
+algoritmo "ProgramaTreinandoVetor"
+// Função : O usuário insere 10 nomes e o programa os retorna.
+// Autor : Ana Claudia Correa da Silva
+// Data : 04/11/2020
+// Seção de Declarações 
+var
+
+A: vetor [1..10] de caractere
+I: inteiro
+
+inicio
+
+para I de 1 ate 10 passo 1 faca
+     escreval("")
+     escreval("Digite 10 nomes: ")
+     escreval("")
+     leia(A[i])
+fimpara
+limpatela
+         escreval("")
+         escreval("Esse são os nomes que você digitou: ")
+         escreval("")
+    para I de 1 ate 10 passo 1 faca
+         escreval(A[i])
+    fimpara
+
+fimalgoritmo

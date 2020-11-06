@@ -1,0 +1,22 @@
+algoritmo "POSITIVONEGATIVO"
+// Função : O USUÁRIO INSERE 1 VALOR E O PROGRAMA RETORNA O VALOR POSITIVO DO MESMO.
+// Autor : ANA CLAUDIA CORREA DA SILVA
+// Data : 24/10/2020
+// Seção de Declarações 
+var
+
+X,M: INTEIRO
+
+inicio
+
+ESCREVAL("DIGITE UM NÚMERO QUALQUER (INTEIRO)")
+                 LEIA(X)
+ ESCREVAL("")
+     M <- X * (-1)
+     SE X < 0 ENTAO
+        ESCREVAL("ESSE É O VALOR POSITIVO: ",M)
+        SENAO
+        ESCREVAL("O NÚMERO ",X," JÁ É POSITIVO!")
+     FIMSE
+
+fimalgoritmo

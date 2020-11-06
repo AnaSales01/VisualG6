@@ -1,0 +1,33 @@
+algoritmo "ProgramaSubtração"
+// Função : O usuário insere 20 números em 2 matrizes e o programa  retorna a subtração dessas duas matrizes em uma outra matriz.
+// Autor : Ana Claudia Correa da Silva
+// Data : 04/11/2020
+// Seção de Declarações 
+var
+
+A,B: vetor [1..20] de inteiro
+C: vetor [1..20] de real
+I: inteiro
+
+inicio
+
+para I de 1 ate 20 passo 1 faca
+     escreval("")
+     escreval("Digite qualquer número (inteiro): ")
+     escreval("")
+     leia(A[i])
+fimpara
+limpatela
+    para I de 1 ate 20 passo 1 faca
+         escreval("")
+         escreval("Digite um número qualquer (inteiro): ")
+         escreval("")
+         leia(B[i])
+    fimpara
+    limpatela
+    escreval("Resultado da subtração da matriz A pela Matriz B: ")
+para i de 1 ate 20 passo 1 faca
+  C[I] <- A[i] - B[i]
+  escreval(C[i])
+fimpara
+fimalgoritmo

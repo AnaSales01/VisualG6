@@ -1,0 +1,33 @@
+algoritmo "ProgramaSomaMultiplica"
+// Função : O usuário insere 10 números e o programa os retorna em uma outra matriz.
+// Autor : Ana Claudia Correa da Silva
+// Data : 04/11/2020
+// Seção de Declarações 
+var
+
+A,B: vetor [1..10] de inteiro
+I: inteiro
+
+inicio
+
+para i de 1 ate 10 passo 1 faca
+     escreval("")
+     escreval("Digite qualquer número (inteiro): ")
+     escreval("")
+leia(A[I])
+fimpara
+     para i de 1 ate 10 faca
+        se A[i] mod 2 = 0 entao
+          B[i] <- A[i] + 5
+        senao
+          B[i] <- A[i] * 5
+        fimse
+     fimpara
+escreval("")
+escreval("Matriz B")
+escreval("")
+para i de 1 ate 10 faca
+escreval(B[i])
+fimpara
+
+fimalgoritmo

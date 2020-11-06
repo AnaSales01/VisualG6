@@ -1,0 +1,29 @@
+algoritmo "ProgramaSomaImpar"
+// Função : O usuário insere 5 números e programa retorna a soma dos números impares.
+// Autor : Ana Claudia Correa da Silva
+// Data : 04/11/2020
+// Seção de Declarações 
+var
+
+A: vetor [1..5] de inteiro
+I,Soma: inteiro
+
+inicio
+
+Soma <- 0
+para i de 1 ate 5 passo 1 faca
+     escreval("")
+     escreval("Digite qualquer número (inteiro): ")
+     escreval("")
+     leia(A[I])
+fimpara
+     para i de 1 ate 5 passo 1 faca
+        se A[i] mod 2 <> 0 entao
+         soma <- soma + A[i]
+        fimse
+     fimpara
+            escreval("")
+            escreval("Soma dos números impares é: ",Soma)
+            escreval("")
+
+fimalgoritmo
