@@ -1,0 +1,123 @@
+algoritmo "ProgramaAgenda"
+// Função : O usuário insere os seus dados e o programa os retorna em ordem crescente.
+// Autor : Ana Cláudia Correa da Silva
+// Data : 26/10/2020
+// Seção de Declarações 
+var
+
+N: vetor[1..6] de caractere
+EN: vetor[1..6] de caractere
+CEP,T: vetor[1..6] de inteiro
+I,J:inteiro
+X,Y: caractere
+Z,W: inteiro
+
+inicio
+
+escreval("")
+escreval("-------------------------------------")
+escreval("|      CADASTRE OS SEUS DADOS      | ")
+escreval("-------------------------------------")
+escreval("")
+   para I de 1 ate 6 passo 1 faca
+        escreval("Digite o seu nome: ")
+        escreval("===================")
+        leia(N[I])
+        escreval("")
+        escreval("Digite o seu endereço: ")
+        escreval("=======================")
+        leia(EN[I])
+        escreval("")
+        escreval("Digite o seu CEP: ")
+        escreval("==================")
+        leia(CEP[I])
+        escreval("")
+        escreval("Digite o número do seu telefone: ")
+        escreval("=================================")
+        leia(T[I])
+        limpatela
+   fimpara
+
+     limpatela
+
+     //colocando nomes em ordem crescente//
+
+    para I de 1 ate 5 faca
+    para J de I+1 ate 6 faca
+     se N[I] > N[J] entao
+     X <- N[I]
+     N[I] <- N[J]
+     N[J] <- X
+     fimse
+     fimpara
+     fimpara
+     escreval("")
+     escreval("==================================")
+     escreval("     NOMES EM ORDEM CRESCENTE     ")
+     escreval("==================================")
+     escreval("")
+     para I de 1 ate 6 faca
+     escreval(N[I])
+     fimpara
+     
+     //colocando endereço em ordem crescente//
+     
+     para I de 1 ate 5 faca
+    para J de I+1 ate 6 faca
+     se EN[I] > EN[J] entao
+     Y <- EN[I]
+     EN[I] <- EN[J]
+     EN[J] <- Y
+     fimse
+     fimpara
+     fimpara
+     escreval("")
+     escreval("======================================")
+     escreval("     ENDEREÇOS EM ORDEM CRESCENTE     ")
+     escreval("======================================")
+     escreval("")
+     para I de 1 ate 6 faca
+     escreval(EN[I])
+     fimpara
+     
+     //colocando o CEP em ordem crescente//
+     
+     para I de 1 ate 5 faca
+    para J de I+1 ate 6 faca
+     se CEP[I] > CEP[J] entao
+     Z <- CEP[I]
+     CEP[I] <- CEP[J]
+     CEP[J] <- Z
+     fimse
+     fimpara
+     fimpara
+     escreval("")
+     escreval("================================")
+     escreval("     CEP EM ORDEM CRESCENTE     ")
+     escreval("================================")
+     escreval("")
+     para I de 1 ate 6 faca
+     escreval(CEP[I])
+     fimpara
+     
+     //colocando os telefones em ordem crescente//
+     
+     para I de 1 ate 5 faca
+    para J de I+1 ate 6 faca
+     se T[I] > T[J] entao
+     W <- T[I]
+     T[I] <- T[J]
+     T[J] <- W
+     fimse
+     fimpara
+     fimpara
+     escreval("")
+     escreval("======================================")
+     escreval("     TELEFONES EM ORDEM CRESCENTE     ")
+     escreval("======================================")
+     escreval("")
+     para I de 1 ate 6 faca
+     escreval(T[I])
+     fimpara
+
+fimalgoritmo

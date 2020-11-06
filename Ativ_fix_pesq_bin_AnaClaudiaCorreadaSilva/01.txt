@@ -1,0 +1,76 @@
+algoritmo "ProgramaSoma2"
+// Função : O usuário insere 20 valores e o programa salva-os e soma mais 2 em uma outra matriz. O programa também localiza se o número está ou não nele.
+// Autor :  Ana Claudia Correa  da Silva
+// Data : 28/10/2020
+// Seção de Declarações 
+var
+
+A,B: vetor [1..20] de inteiro
+I,J,X,Comeco,Final,Meio,P: inteiro
+R: caractere
+Acha: logico
+
+inicio
+
+para I de 1 ate 20 faca
+     escreval("")
+     escreval("              Digite um número qualquer (inteiro):             ")
+     escreval("===============================================================")
+     escreval("")
+     leia(A[I])
+fimpara
+ para I de 1 ate 19 faca
+   para J de I+1 ate 20 faca
+        se A[I] > A[J] entao
+           X <- A[I]
+           A[I] <- A[J]
+           A[J] <- X
+        fimse
+   fimpara
+ fimpara
+          escreval("")
+          escreval("Números digitados acrescentado mais 2 e em ordem crescente:")
+          escreval("==========================================================")
+          escreval("")
+          para I de 1 ate 20 faca
+               B[I] <- A[I] + 2
+               escreval(B[I])
+          fimpara
+           R <- "Sim"
+             enquanto (R = "Sim") faca
+                      escreval("")
+                      escreval("           Qual o número pesquisado?          ")
+                      escreval("==============================================")
+                      escreval("")
+                      leia(P)
+                      Comeco <- 1
+                      Final <- 20
+                      Acha <- falso
+                enquanto (Comeco <= Final) e (Acha = falso) faca
+                         Meio <- (Comeco + Final) div 2
+                         se(P = B[meio]) entao
+                              Acha <- verdadeiro
+                         senao
+                           se (P < B[meio]) entao
+                              Final <- Meio - 1
+                           senao
+                                Comeco <- Meio + 1
+                           fimse
+                           fimse
+                 fimenquanto
+                   se (Acha = verdadeiro) entao
+                      escreval("")
+                      escreval(P," foi localizado na posição ",Meio)
+                      escreval("")
+                   senao
+                       escreval("")
+                       escreval(P," não foi localizado")
+                       escreval("")
+                   fimse
+                    escreval("")
+                    escreval("Deseja continuar? ")
+                    escreval("")
+                    leia(R)
+              fimenquanto
+
+fimalgoritmo

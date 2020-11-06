@@ -1,0 +1,30 @@
+algoritmo "ProgramaMultiplicapor5"
+// Função : O usuário insere 8 valores e o programa retorna esses valores multiplicado por 5 e em outra matriz.
+// Autor : Ana Claudia Correa da Silva
+// Data : 26/10/2020
+// Seção de Declarações 
+var
+
+A,B: vetor [1..8] de inteiro
+I: inteiro
+
+inicio
+
+ para I de 1 ate 8 faca
+      escreval("")
+      escreval("Digite um número qualquer (inteiro): ")
+      escreval("")
+      leia(A[I])
+ fimpara
+        limpatela
+                 escreval("")
+                 escreval("======================")
+                 escreval("       RESULTADO      ")
+                 escreval("======================")
+                 escreval("")
+     para I de 1 ate 8 faca
+          B[I] <- A[I]*5
+          escreval(B[I])
+     fimpara
+
+ fimalgoritmo

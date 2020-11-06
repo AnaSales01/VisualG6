@@ -1,0 +1,60 @@
+algoritmo "Programa5000"
+// Função : O programa retorna os 20 primeiros números do intervalo de 5000 em diante.
+// Autor : Ana Claudia Correa da Silva
+// Data : 27/10/2020
+// Seção de Declarações 
+var
+
+ N: vetor [1..40] de inteiro
+ I: inteiro
+
+inicio
+
+para I de 1 ate 40 passo 1 faca
+
+ N[1] <- 5000
+ N[2] <- 5001
+ N[3] <- 5002
+ N[4] <- 5003
+ N[5] <- 5004
+ N[6] <- 5005
+ N[7] <- 5006
+ N[8] <- 5007
+ N[9] <- 5008
+ N[10] <- 5009
+ N[11] <- 5010
+ N[12] <- 5011
+ N[13] <- 5012
+ N[14] <- 5013
+ N[15] <- 5014
+ N[16] <- 5015
+ N[17] <- 5016
+ N[18] <- 5017
+ N[19] <- 5018
+ N[20] <- 5019
+ N[21] <- 5020
+ N[22] <- 5021
+ N[23] <- 5022
+ N[24] <- 5023
+ N[25] <- 5024
+ N[26] <- 5025
+ N[27] <- 5026
+ N[28] <- 5027
+ N[29] <- 5028
+ N[30] <- 5029
+ N[31] <- 5030
+ N[32] <- 5031
+ N[33] <- 5032
+ N[34] <- 5033
+ N[35] <- 5034
+ N[36] <- 5035
+ N[37] <- 5036
+ N[38] <- 5037
+ N[39] <- 5038
+ N[40] <- 5039
+  se N[I] mod 2 = 0 entao
+ escreval(N[I])
+fimse
+ fimpara
+
+fimalgoritmo

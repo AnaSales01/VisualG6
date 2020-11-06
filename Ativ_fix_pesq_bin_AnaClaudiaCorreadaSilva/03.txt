@@ -1,0 +1,44 @@
+algoritmo "ProgramaCubo"
+// Função : O usuário insere 30 valores e o programa retorna o cubo desses valores e ainda procura o valor fazendo uma pesquisa sequencial.
+// Autor : Ana Claudia Correa da Silva
+// Data : 28/10/2020
+// Seção de Declarações 
+var
+
+A: vetor [1..30] de inteiro
+B: vetor [1..30] de real
+I,P: inteiro
+
+
+inicio
+
+para I de 1 ate 30 faca
+     escreval("")
+     escreval("              Digite um número qualquer (inteiro):            ")
+     escreval("===============================================================")
+     escreval("")
+     leia(A[I])
+fimpara
+          escreval("")
+          escreval("              Números digitados ao cubo:                  ")
+          escreval("==========================================================")
+          escreval("")
+          para I de 1 ate 30 faca
+               B[I] <- A[I] ^ 3
+               escreval(B[I])
+          fimpara
+
+                 escreval("Qual número deseja pesquisar? ")
+                 leia(P)
+                      I <- 1
+             enquanto (I < 30) e (B[I] <> P) faca
+                      I <- I + 1
+             fimenquanto
+                 se B[I] = P entao
+                    escreval("O número foi encontrado na posição ",I)
+                 senao
+                      escreval("Esse número não se encontra no sitema!")
+                 fimse
+
+
+fimalgoritmo

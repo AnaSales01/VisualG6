@@ -1,0 +1,61 @@
+algoritmo "ProgramaCrescenteeDecrescente"
+// Função : O usuário insere 12 valores e o programa retorna eles em ordem decrescente e metade desses valores em ordem crescente.
+// Autor : Ana Cláudia Correa da Silva
+// Data : 26/10/2020
+// Seção de Declarações 
+var
+ A: vetor [1..15] de inteiro
+ B: vetor [1..15] de real
+ I,J: inteiro
+ X: inteiro
+ Y: real
+inicio
+
+para I de 1 ate 15 passo 1 faca
+     escreval("")
+     escreval("Digite um número qualquer (inteiro): ")
+     escreval("")
+     leia(A[I])
+fimpara
+limpatela
+         para i de 1 ate 14 faca
+           para J de I+1 ate 15 faca
+            se A[I] < A[J] entao
+              X <- A[I]
+              A[I] <- A[J]
+              A[J] <- X
+            fimse
+           fimpara
+        fimpara
+            escreval("")
+            escreval("===================================================")
+            escreval("     NÚMEROS DA MATRIZ A EM ORDEM DECRESCENTE      ")
+            escreval("===================================================")
+            escreval("")
+            para I de 1 ate 15 passo 1 faca
+            B[I] <- A[I]/2
+            fimpara
+     para I de 1 ate 15 faca
+     escreval(A[I])
+     fimpara
+  para i de 1 ate 14 faca
+           para J de I+1 ate 15 faca
+            se B[I] > B[J] entao
+               Y <- B[I]
+               B[I] <- B[J]
+               B[j] <- Y
+            fimse
+           fimpara
+        fimpara
+            escreval("")
+            escreval("===================================================")
+            escreval("     NÚMEROS DA MATRIZ B EM ORDEM CRESCENTE        ")
+            escreval("===================================================")
+            escreval("")
+     para I de 1 ate 15 faca
+     escreval(B[I])
+     fimpara
+
+     
+
+fimalgoritmo

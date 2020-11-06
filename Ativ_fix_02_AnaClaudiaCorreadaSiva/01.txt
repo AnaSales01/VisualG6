@@ -1,0 +1,27 @@
+algoritmo "ProgramaMatrizVetor"
+// Função : O usuário insere 25 números e o programa retorna 10 dos digitados em outra matriz.
+// Autor : Ana Claudia Correa da Silva
+// Data : 26/10/2020
+// Seção de Declarações 
+var
+
+A:vetor[1..5,1..5] de inteiro
+B:vetor[1..10] de inteiro
+I,J,R: inteiro
+
+inicio
+
+para I de 1 ate 5 passo 1 faca
+para J de 1 ate 5 passo 1 faca
+escreval("Digite um número qualquer (inteiro): ")
+leia(A[I,J])
+fimpara
+fimpara
+para I de 1 ate 5 passo 1 faca
+para J de 1 ate 2 passo 1 faca
+B[I] <- A[I,J]
+escreval(B[I])
+fimpara
+fimpara
+
+fimalgoritmo

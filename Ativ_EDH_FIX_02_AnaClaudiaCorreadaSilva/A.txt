@@ -1,0 +1,39 @@
+algoritmo "ProgramaDescrescente"
+// Função : O usuário insere 12 números e o programa retorna esses números em ordem decrescente.
+// Autor : Ana Cláudia Correa da Silva
+// Data : 26/10/2020
+// Seção de Declarações 
+var
+
+A: VETOR [1..12] DE INTEIRO
+I,J: INTEIRO
+X: inteiro
+
+inicio
+
+PARA I DE 1 ATE 12 PASSO 1 FACA
+     escreval("")
+     ESCREVAL("DIGITE UM NÚMERO QUALQUER (INTEIRO): ")
+     escreval("")
+     LEIA(A[I])
+FIMPARA
+  PARA I DE 1 ATE 11 FACA
+    PARA J DE i+1 ATE 12 FACA
+       se A[i] < A[j] entao
+          X <- A[I]
+          A[i] <- A[j]
+          A[j] <- X
+       FIMSE
+    FIMPARA
+  FIMPARA
+      limpatela
+              escreval("")
+              escreval("==================================")
+              escreval("NÚMEROS EM ORDEM DECRESCENTE:")
+              escreval("==================================")
+              escreval("")
+         para i de 1 ate 12 faca
+              escreval(A[i])
+         fimpara
+
+fimalgoritmo
